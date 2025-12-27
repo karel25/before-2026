@@ -1,0 +1,79 @@
+body {
+  background: #d8d2c4;
+  font-family: 'Libre Baskerville', serif;
+  margin: 0;
+  padding: 40px;
+}
+
+.book {
+  max-width: 700px;
+  margin: auto;
+  background: #f8f5ef;
+  padding: 60px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.page {
+  display: none;
+  animation: fade 0.6s ease-in-out;
+}
+
+.page.active {
+  display: block;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.author {
+  text-align: center;
+  margin-top: 40px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 5px;
+}
+
+h3 {
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.signature {
+  margin-top: 50px;
+}
+
+button {
+  background: none;
+  border: 1px solid #444;
+  padding: 10px 20px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
