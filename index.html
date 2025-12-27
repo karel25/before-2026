@@ -2,25 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The Year I Loved You</title>
+  <title>Printed Once</title>
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="nav">
-  <div class="brand">Printed Once</div>
+  <div class="brand">PRINTED ONCE</div>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Timeline</a>
-    <a href="#">Letters</a>
-    <a href="#">Archive</a>
+    <a href="#home">Home</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#letters">Letters</a>
+    <a href="#archive">Archive</a>
   </nav>
 </header>
 
 <hr class="divider">
 
-<section class="hero">
+<!-- HOME -->
+<section id="home" class="hero">
   <div class="hero-left">
     <img src="illustration.jpg" alt="Memory">
     <p class="caption">Some things are designed beautifully, then built with care.</p>
@@ -29,15 +30,74 @@
   <div class="hero-right">
     <span class="label">I wrote</span>
     <h1 class="typewriter">A RECORD OF LOVING YOU</h1>
-    <p class="body">
-      This is not a website. It is a quiet documentation of how you existed in my life
-      during the year 2025. I wrote this the way people used to write things they
-      never wanted to lose.
+
+    <div class="columns">
+      <p>
+        This is not a website. It is a quiet documentation of how you existed
+        in my life during the year 2025.
+      </p>
+      <p>
+        This is the way people used to write things they never wanted to lose.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- TIMELINE -->
+<section id="timeline" class="section">
+  <h2>THE YEAR IN PRINT</h2>
+
+  <div class="timeline">
+    <p><strong>January</strong> — We began without knowing we were beginning.</p>
+    <p><strong>April</strong> — Familiarity turned into comfort.</p>
+    <p><strong>August</strong> — Loving you grew heavier, and deeper.</p>
+    <p><strong>December</strong> — I decided to keep this in ink.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- LETTERS -->
+<section id="letters" class="section">
+  <h2>UNSENT LETTERS</h2>
+
+  <div class="letter" onclick="toggleLetter(this)">
+    <h3>Written on a quiet night</h3>
+    <p class="hidden">
+      Loving you didn’t need an audience.  
+      It only needed honesty.
+    </p>
+  </div>
+
+  <div class="letter" onclick="toggleLetter(this)">
+    <h3>Written when I didn’t know how to ask</h3>
+    <p class="hidden">
+      I kept choosing you, even in silence.
     </p>
   </div>
 </section>
 
-<hr class="divider ornament">
+<hr class="divider">
+
+<!-- ARCHIVE -->
+<section id="archive" class="section">
+  <h2>ARCHIVED FRAGMENTS</h2>
+
+  <div class="archive-grid">
+    <figure>
+      <img src="photo1.jpg">
+      <figcaption>A normal day I didn’t know I’d miss.</figcaption>
+    </figure>
+    <figure>
+      <img src="photo2.jpg">
+      <figcaption>Some moments stay longer than others.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<hr class="divider">
 
 <script src="script.js"></script>
 </body>
