@@ -1,77 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Before 2026</title>
 
-  <!-- Book Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="book">
-  <!-- Cover -->
-  <section class="page active">
-    <h1 class="title">Before 2026</h1>
-    <p class="subtitle">A year written for you</p>
-    <p class="author">Karyl — December 31, 2025</p>
-    <button onclick="nextPage()">Begin Reading</button>
-  </section>
 
-  <!-- Chapter 1 -->
-  <section class="page">
-    <h2>Chapter I</h2>
-    <h3>January to Us</h3>
-    <p>
-      This is where your words will begin.
-      The year didn’t start with answers,
-      only with the hope of choosing you—
-      again and again.
-    </p>
-  </section>
+  <!-- PAGE 1 -->
+  <div class="page active">
+    <header class="paper-header">
+      <h1>BEFORE 2026</h1>
+      <span>Special Year-End Edition — December 31, 2025</span>
+    </header>
 
-  <!-- Chapter 2 -->
-  <section class="page">
-    <h2>Chapter II</h2>
-    <h3>The Ordinary Days</h3>
-    <p>
-      Not the grand moments,
-      but the quiet ones.
-      The days I loved you
-      without even realizing it.
-    </p>
-  </section>
+    <h2 class="headline">The Year I Learned What Love Looks Like</h2>
+    <p class="subheadline">An honest account of 2025, written for one person.</p>
 
-  <!-- Chapter 3 -->
-  <section class="page">
-    <h2>Chapter III</h2>
-    <h3>When It Wasn’t Easy</h3>
-    <p>
-      We didn’t always get it right.
-      But I never stopped choosing you.
-    </p>
-  </section>
+    <div class="columns">
+      <p>
+        2025 did not arrive quietly.  
+        It came with expectations, uncertainty, and hope.  
+        Somewhere between ordinary days and unforgettable nights,
+        I realized the story of this year was always going to be about you.
+      </p>
+      <p>
+        This is not a perfect recollection.  
+        It’s a sincere one.  
+        A year told the only way I know how —
+        truthfully.
+      </p>
+    </div>
 
-  <!-- Final Letter -->
-  <section class="page">
-    <h2>Before 2026</h2>
-    <p>
-      This is where the final letter goes.
-      The one I hope you read slowly.
-    </p>
-    <p class="signature">
-      Always yours,<br>
-      Karyl
-    </p>
-  </section>
-
-  <!-- Navigation -->
-  <div class="nav">
-    <button onclick="prevPage()">← Previous</button>
-    <button onclick="nextPage()">Next →</button>
+    <footer>Page 1</footer>
   </div>
+
+  <!-- PAGE 2 -->
+  <div class="page">
+    <header class="paper-header small">
+      <span>Feature Story</span>
+    </header>
+
+    <div class="columns">
+      <p>
+        I learned that love is not measured in grand gestures.
+        It’s in the quiet check-ins.
+        The patience.
+        The staying.
+      </p>
+
+      <figure>
+        <img src="images/her1.jpg">
+        <figcaption>
+          Somewhere in 2025, I felt at home.
+        </figcaption>
+      </figure>
+
+      <p>
+        Loving you this year taught me responsibility.
+        Not the heavy kind —
+        the meaningful one.
+      </p>
+    </div>
+
+    <footer>Page 2</footer>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div class="page">
+    <header class="paper-header small">
+      <span>Photo Column</span>
+    </header>
+
+    <div class="photo-grid">
+      <figure>
+        <img src="images/her2.jpg">
+        <figcaption>Soft days.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/her3.jpg">
+        <figcaption>The way you exist.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/her4.jpg">
+        <figcaption>Quiet happiness.</figcaption>
+      </figure>
+    </div>
+
+    <footer>Page 3</footer>
+  </div>
+
+  <!-- PAGE 4 -->
+  <div class="page">
+    <header class="paper-header small">
+      <span>Editor’s Note</span>
+    </header>
+
+    <p class="letter">
+      Before 2026 arrives,  
+      I want you to know this —
+
+      choosing you in 2025
+      was never a question.
+
+      It was a decision I made
+      every single day.
+    </p>
+
+    <p class="signature">
+      — Karyl<br>
+      December 31, 2025
+    </p>
+
+    <footer>Final Page</footer>
+  </div>
+
+</div>
+
+<div class="controls">
+  <button onclick="prevPage()">← Previous</button>
+  <button onclick="nextPage()">Next →</button>
 </div>
 
 <script src="script.js"></script>
