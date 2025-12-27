@@ -1,79 +1,105 @@
 body {
-  background: #d8d2c4;
+  background: #bfb8a3;
   font-family: 'Libre Baskerville', serif;
   margin: 0;
   padding: 40px;
 }
 
 .book {
-  max-width: 700px;
+  width: 800px;
+  height: 520px;
   margin: auto;
-  background: #f8f5ef;
-  padding: 60px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  perspective: 2000px;
   position: relative;
 }
 
 .page {
-  display: none;
-  animation: fade 0.6s ease-in-out;
+  background: #f4f1ea;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transform-origin: left;
+  transform: rotateY(180deg);
+  transition: transform 0.9s ease;
+  backface-visibility: hidden;
 }
 
 .page.active {
-  display: block;
+  transform: rotateY(0deg);
+  z-index: 10;
 }
 
-.title {
+.paper-header h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  text-align: center;
+  margin: 0;
 }
 
-.subtitle {
-  text-align: center;
-  font-style: italic;
-  margin-top: 10px;
+.paper-header span {
+  font-size: 0.8rem;
+  color: #555;
 }
 
-.author {
-  text-align: center;
-  margin-top: 40px;
-}
-
-h2 {
+.headline {
   font-family: 'Playfair Display', serif;
-  margin-bottom: 5px;
+  font-size: 2rem;
 }
 
-h3 {
+.subheadline {
   font-style: italic;
-  margin-bottom: 30px;
 }
 
-p {
+.columns {
+  column-count: 2;
+  column-gap: 40px;
+  margin-top: 20px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+img {
+  width: 100%;
+  filter: sepia(30%);
+  border: 1px solid #aaa;
+}
+
+figcaption {
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.letter {
+  font-size: 1.1rem;
   line-height: 1.8;
-  margin-bottom: 20px;
+  white-space: pre-line;
 }
 
 .signature {
-  margin-top: 50px;
+  margin-top: 40px;
+  font-style: italic;
+}
+
+footer {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 0.8rem;
+}
+
+.controls {
+  text-align: center;
+  margin-top: 30px;
 }
 
 button {
   background: none;
-  border: 1px solid #444;
+  border: 1px solid #333;
   padding: 10px 20px;
-  font-family: inherit;
   cursor: pointer;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
-}
-
-@keyframes fade {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
