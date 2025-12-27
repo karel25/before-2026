@@ -1,24 +1,27 @@
-let current = 0;
 const pages = document.querySelectorAll('.page');
+let current = 0;
 
-function showPage(index) {
-  pages.forEach((p, i) => {
-    p.classList.toggle('active', i === index);
-  });
-}
-
-function nextPage() {
+document.body.addEventListener('click', () => {
   if (current < pages.length - 1) {
+    pages[current].classList.remove('active');
     current++;
-    showPage(current);
+    pages[current].classList.add('active');
   }
-}
+});
 
-function prevPage() {
-  if (current > 0) {
-    current--;
-    showPage(current);
-  }
-}
+// Typewriter effect
+document.querySelectorAll('.typewriter').forEach(el => {
+  const text = el.textContent;
+  el.textContent = '';
+  let i = 0;
+  const typing = setInterval(() => {
+    el.textContent += text[i];
+    i++;
+    if (i >= text.length) clearInterval(typing);
+  }, 40);
+});
 
-showPage(current);
+// Easter egg
+document.querySelector('.secret')?.addEventListener('dblclick', () => {
+  alert("You were always more important than you knew.");
+});
