@@ -1,23 +1,24 @@
-let currentPage = 0;
-const pages = document.querySelectorAll(".page");
+let current = 0;
+const pages = document.querySelectorAll('.page');
 
 function showPage(index) {
-  pages.forEach(page => page.classList.remove("active"));
-  pages[index].classList.add("active");
+  pages.forEach((p, i) => {
+    p.classList.toggle('active', i === index);
+  });
 }
 
 function nextPage() {
-  if (currentPage < pages.length - 1) {
-    currentPage++;
-    showPage(currentPage);
+  if (current < pages.length - 1) {
+    current++;
+    showPage(current);
   }
 }
 
 function prevPage() {
-  if (currentPage > 0) {
-    currentPage--;
-    showPage(currentPage);
+  if (current > 0) {
+    current--;
+    showPage(current);
   }
 }
 
-showPage(currentPage);
+showPage(current);
